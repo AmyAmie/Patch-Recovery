@@ -6,10 +6,10 @@ on:
       RECOVERY_URL:
         description: 'RECOVERY URL'
         required: true
-        default: 'https://transfer.sh/(RECOMMENDED)'
+        default: 'https://leo.it.tab.digital/remote.php/dav/files/amyterresfuchs%40proton.me/recovery.img.lz4'
 
 env:
-  RECOVERY_URL: https://oshi.at/Rpjg
+  RECOVERY_URL: https://leo.it.tab.digital/remote.php/dav/files/amyterresfuchs%40proton.me/recovery.img.lz4
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
         mv fastbootd-recovery.tar fastbootd-recovery.tar.md5
 
     - name: Upload Recovery
-      uses: actions/upload-artifact@latest
+      uses: actions/upload-artifact@v4
       with:
         path: /home/runner/work/Patch-Recovery/Patch-Recovery/output/*.md5
         name: Patched-Recovery
